@@ -25,7 +25,7 @@
         var courseCode = /\[([^\]]+)\]/.exec(courseText);
         if (courseCode != null) {
             var courseName = (courseText.replace(courseCode[0],"")).split("(")[0];
-            course.firstChild.innerHTML = '<table style="font-size:13px; font-family: \'Helvetica Neue\', \'Arial\', sans-serif"><tr><td style="width: 120px"><b>'+courseCode[1]+'</b></td><td style="width: 450px">' + courseName + "</td></tr></table>"
+            course.firstChild.innerHTML = '<table style="font-size:13px; font-family: \'SF Pro Text\', \'Helvetica Neue\', Arial, sans-serif"><tr><td style="font-family: \'SF Mono\', Menlo, \'Courier New\', monospace"><b>'+courseCode[1].substring(0,8)+'</b></td><td style="width: 450px">' + courseName + "</td></tr></table>"
             //course.firstChild.innerHTML = "<table><td><b>" + courseCode[1] + "</b></td><td>" + courseName + "</td></table>";
         }
         console.log(courseCode);
