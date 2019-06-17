@@ -1,7 +1,7 @@
 # blackboard-skin-v2
 An updated version of my Blackboard skin.
 
-![Screenshot](https://i.imgur.com/tF7YG5x.png)
+![Screenshot](https://i.imgur.com/eadNVmq.png)
 
 ## Installation instructions
 1. Create a new Stylish skin called whatever you like, and paste the code from `style.css` in. Make sure to set `URL starts with` to `https://learn.uq.edu.au`.
