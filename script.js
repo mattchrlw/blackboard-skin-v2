@@ -10,25 +10,43 @@
 
 (function() {
     var courses = document.querySelectorAll(".menu-item li");
-    var COMPcolor = '#E8F5E9'; // green
-    var COMScolor = '#E0F2F1'; // teal
-    var COSCcolor = '#FFFDE7'; // yellow
-    var CSSEcolor = '#E3F2FD'; // blue
-    var DECOcolor = '#F3E5F5'; // purple
-    var INFScolor = '#F9FBE7'; // lime
-    var MATHcolor = '#FFEBEE'; // red
-    var STATcolor = '#FFF3E0'; // orange
-    var defaultColor = '#FAFAFA';
+//     var COMPcolor = '#E8F5E9'; // green
+//     var COMScolor = '#E0F2F1'; // teal
+//     var COSCcolor = '#FFFDE7'; // yellow
+//     var CSSEcolor = '#E3F2FD'; // blue
+//     var DECOcolor = '#F3E5F5'; // purple
+//     var INFScolor = '#F9FBE7'; // lime
+//     var MATHcolor = '#FFEBEE'; // red
+//     var STATcolor = '#FFF3E0'; // orange
+    var COMPcolor = '#CDCAFF'; // green
+    var COMScolor = '#CDCAFF'; // teal
+    var COSCcolor = '#CDCAFF'; // yellow
+    var CSSEcolor = '#CDCAFF'; // blue
+    var DECOcolor = '#CDCAFF'; // purple
+    var INFScolor = '#CDCAFF'; // lime
+    var MATHcolor = '#FFCACA'; // red
+    var STATcolor = '#FFCACA'; // orange
+    var defaultColor = '#EEEEEE';
     Array.prototype.forEach.call(courses, function(course) {
-        var courseText = course.firstChild.textContent;
-        console.log(courseText);
-        var courseCode = /\[([^\]]+)\]/.exec(courseText);
-        if (courseCode != null) {
-            var courseName = (courseText.replace(courseCode[0],"")).split("(")[0];
-            course.firstChild.innerHTML = '<table style="font-size:13px; font-family: \'SF Pro Text\', \'Helvetica Neue\', Arial, sans-serif"><tr><td style="font-family: \'SF Mono\', Menlo, \'Courier New\', monospace"><b>'+courseCode[1].substring(0,8)+'</b></td><td style="width: 450px">' + courseName + "</td></tr></table>"
-            //course.firstChild.innerHTML = "<table><td><b>" + courseCode[1] + "</b></td><td>" + courseName + "</td></table>";
+        var courseText, courseCode, courseName = "";
+        if (course.firstChild.nodeName == '#text') {
+            courseText = course.textContent;
+            courseCode = /\[([^\]]+)\]/.exec(courseText);
+            if (courseCode != null) {
+                courseName = (courseText.replace(courseCode[0],"")).split("(")[0];
+                // I'm well aware that this is completely disgusting, but if it works, it works
+                course.innerHTML = '<table style="@import url(\'https://rsms.me/inter/inter.css\'); padding:5px; font-size:13px; color: #FFFFFF; font-family: \'Inter\', \'SF Pro Text\', \'Helvetica Neue\', Arial, sans-serif"><tr><td style="font-family: \'SF Mono\', Menlo, \'Courier New\', monospace"><b>'+courseCode[1].substring(0,8)+'</b></td><td style="width: 600px">' + courseName + "</td></tr></table>"
+            }
         }
-        console.log(courseCode);
+        else {
+            courseText = course.firstChild.textContent;
+            courseCode = /\[([^\]]+)\]/.exec(courseText);
+            if (courseCode != null) {
+                courseName = (courseText.replace(courseCode[0],"")).split("(")[0];
+                // I'm well aware that this is completely disgusting, but if the original website is a hack anyway, what are you gonna do
+                course.firstChild.innerHTML = '<table style="@import url(\'https://rsms.me/inter/inter.css\'); font-size:13px; font-family: \'Inter\', \'SF Pro Text\', \'Helvetica Neue\', Arial, sans-serif"><tr><td style="font-family: \'SF Mono\', Menlo, \'Courier New\', monospace"><b>'+courseCode[1].substring(0,8)+'</b></td><td style="width: 600px">' + courseName + "</td></tr></table>"
+            }
+        }
         switch(courseText.substring(1,5)) {
             case "COMP":
                 course.style.background = COMPcolor;

@@ -1,19 +1,36 @@
+@import url('https://rsms.me/inter/inter.css');
+
 body {
-    font-family: "SF Pro Text", "Helvetica Neue", "Neue Haas Grotesk Text Pro", "Arial";
-    background: #DDDDDD;
+    font-family: "Inter", "SF Pro Text", "Helvetica Neue", "Neue Haas Grotesk Text Pro", "Arial";
+    background: #FFFFFF;
+}
+
+.nav-link {
+ 	color: #000000 !important;
+  	background: #FFFFFF !important;
+}
+
+.menuWrap {
+  	border: none !important;
+ 	box-shadow: none !important;
 }
 
 nav {
     box-shadow: none;
 }
 
+.menu-locked, .menu-closed, .menu-opened {
+  display: none;
+}
+
 .menu-item h4 {
-    background: #DDDDDD;
-    border-bottom: 0px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #CCCCCC;
+  	padding-left: 8px;
     color: #000000;
-    font-size: 1.2em;
+    font-size: 1em;
+  	line-height: 3em;
     text-align: left;
-    letter-spacing: -0.5px;
 }
 
 .menu-item ul {
@@ -24,7 +41,18 @@ nav {
 .breadcrumbs,
 .actionBar,
 .bgBanner {
-    background: #424242 !important;
+    background: #FFFFFF !important;
+  	color: #000000 !important;
+ 	text-shadow: none !important;
+  	box-shadow: none !important;
+}
+
+.breadcrumbs .path a {
+  color: #666666 !important;
+}
+
+.breadcrumbs .path li {
+  color: #000000 !important;
 }
 
 .breadcrumbs {
@@ -35,7 +63,8 @@ nav {
 }
 
 .portlet {
-    border-color: #DDDDDD;
+    border: 0px solid white !important;
+  	box-shadow: none !important;
 }
 
 .paneTabs {
@@ -51,20 +80,35 @@ nav {
 }
 
 #column0 {
-    width: 20% !important;
+    width: 25% !important;
 }
 
 #column1 {
-    width: 60% !important;
+    width: 50% !important;
 }
 
 #column2 {
-    width: 20% !important;
+    width: 25% !important;
+}
+
+
+
+.appTabs a {
+  	color: #000000 !important; 
+}
+
+.bannerImage {
+  display: none !important
+}
+
+.active a {
+  	text-shadow: none !important;
 }
 
 .topTabs {
     height: 50px;
     box-shadow: none;
+  	color: #000000;
 }
 
 .brandingImgWrap a {
@@ -73,9 +117,8 @@ nav {
 }
 
 #appTabList {
-    padding-right: 10px;
-    font-size: 1.4em;
-    color: #FFFFFF;
+    font-size: 1.5em;
+    color: #000000;
 }
 
 .bannerImage {
@@ -84,21 +127,40 @@ nav {
 }
 
 .localViewToggle {
-    background: #DDDDDD;
+    background: #FFFFFF;
 }
 
-.topTabs .tabWrapper-right .appTabs {
-    float: left;
-    margin-left: 300px;
+.topTabs .appTabs {
+  	display: float !important;
+  	float: left !important;
     margin-top: 1px;
+  	margin-left: auto;
+  	margin-right: auto;
+
+
+  	color: #000000 !important;
 }
 
 .actionBar {
     display: none;
 }
 
+.menuWrap a {
+ 	color: #000000 !important; 
+  	border: none !important;
+}
+
+#courseMenuPalette div.navPaletteContent ul li a span {
+  	color: #000000;
+}
+
+.navigationPane {
+ 	box-shadow: none !important;
+}
+
 #courseMenuPalette div.navPaletteContent {
-    background-color: #424242;
+    background-color: #FFFFFF;
+  	box-shadow: none !important;
 }
 
 .actionBarMicro {
@@ -116,7 +178,7 @@ nav {
 }
 
 .contentBox {
-    border: 0px;
+    border: 0px solid white !important;
     box-shadow: none;
     background: #FFFFFF;
 }
@@ -124,12 +186,13 @@ nav {
 .portal .contentBox {
     border: 0px;
     box-shadow: none;
-    background: #DDDDDD;
+    background: #FFFFFF;
 }
 
 .container {
     display: float;
-    margin: 0px;
+    margin-left: auto;
+  	margin-right: auto;
     max-width: 1200px;
 }
 
@@ -138,7 +201,7 @@ nav {
 }
 
 .pageTitle {
-    background: #DDDDDD;
+    background: #FFFFFF;
 }
 
 .menu-item li {
@@ -147,9 +210,9 @@ nav {
     font-size: 1em;
     height: 30px;
     border: 0px solid #FFFFFF !important;
-    line-height: 1.1em;
+    line-height: 1em;
     overflow: hidden;
-    color: #AAAAAA;
+    color: #000000;
 }
 
 .menu-item li a {
